@@ -5,8 +5,25 @@ import FadeIn from './FadeIn'
 
 const testimonials = [
   {
-    quote: 'Navin brings a rare combination of deep technical knowledge and strategic thinking. His ability to translate complex data architecture challenges into practical, scalable solutions has been invaluable to our team.',
-    author: '[Colleague Name]',
+    quote: 'Navin consistently impressed me with his exceptional skills, dedication, and commitment to delivering high-quality solutions. His expertise in business intelligence, Azure Data Factory, data analysis, and visualization tools is truly remarkable. Navin possesses a deep understanding of data modeling, ETL processes, and database management, enabling him to design and implement robust BI solutions. Beyond technical proficiency, Navin is a valuable team player who collaborates effectively with cross-functional teams. I highly recommend Navin — his technical expertise, professionalism, and dedication make him a valuable asset to any organization seeking to harness the power of data.',
+    author: 'Karthikeyan Govindaraj',
+    title: 'Full Stack Developer',
+    company: 'Odessa Inc.',
+    date: 'March 12, 2024',
+    relation: 'Managed Navin directly',
+    initials: 'KG',
+    rating: 5,
+  },
+  {
+    quote: 'Add another LinkedIn recommendation here — reach out to a former colleague or manager.',
+    author: '[Add Colleague]',
+    title: '[Title · Company]',
+    company: '',
+    initials: '?',
+    rating: 5,
+    placeholder: true,
+  },
+]',
     title: '[Title · Company]',
     initial: 'A',
   },
