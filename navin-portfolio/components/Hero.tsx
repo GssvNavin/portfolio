@@ -13,7 +13,9 @@ const stagger = {
 }
 
 export default function Hero() {
-    
+  const [avatar, setAvatar] = useState<string | null>(null)
+  const fileRef = useRef<HTMLInputElement>(null)
+
   const handleFile = (e: ChangeEvent<HTMLInputElement>) => {
     const f = e.target.files?.[0]
     if (!f) return
@@ -148,7 +150,7 @@ export default function Hero() {
                 <div
                   className="w-40 h-40 rounded-full overflow-hidden cursor-pointer flex items-center justify-center group"
                   style={{ border: '3px solid rgba(255,255,255,0.25)', background: '#1a4880' }}
-                  
+                  onClick={() => fileRef.current?.click()}
                 >
                   {avatar ? (
                     <img src={avatar} alt="Navin" className="w-full h-full object-cover" style={{ objectPosition: "center 10%" }} />
@@ -166,12 +168,12 @@ export default function Hero() {
                   className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer shadow-lg"
                   style={{ background: '#0ea5e9' }}
                   whileHover={{ scale: 1.1 }}
-                  
+                  onClick={() => fileRef.current?.click()}
                 >
                   <Upload size={14} className="text-white" />
                 </motion.div>
               </div>
-              
+              <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
 
               <div className="text-center">
                 <p className="text-white font-semibold text-lg font-serif">Navin G.S.S.V</p>
