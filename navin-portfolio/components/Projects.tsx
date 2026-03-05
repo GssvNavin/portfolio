@@ -80,7 +80,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           <>
             <img src={img} alt={project.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <ExternalLink size={20} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+              < size={20} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           </>
         ) : (
@@ -90,7 +90,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
               className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white shadow-sm"
               style={{ background: project.accentColor }}
             >
-              <ExternalLink size={12} />
+              < size={12} />
                Screenshot
             </div>
             <p className="text-slate-400 text-xs">Click to add project image</p>
