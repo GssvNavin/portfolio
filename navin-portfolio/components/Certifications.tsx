@@ -96,7 +96,7 @@ export default function Certifications() {
                       <span className="px-3 py-1 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-semibold rounded-full">
                         {c.year}
                       </span>
-                      <span className="text-[10px] text-slate-400">Click to update</span>
+                    
                     </>
                   )}
                 </div>

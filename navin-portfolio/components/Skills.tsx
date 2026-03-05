@@ -14,7 +14,7 @@ const skillGroups = [
     category: 'Data Architecture & Governance',
     icon: '🏗️',
     color: 'from-blue-500 to-blue-700',
-    skills: ['Enterprise Data Modeling (Erwin)', 'Data Vault', 'Data Governance', 'Data Interoperability', 'Metadata Management', 'Cost Optimization', 'Data Mesh', 'Lineage Tracking', 'RBAC'],
+    skills: ['Enterprise Data Modeling (Erwin)', 'Data Vault', 'Data Governance', 'Data Interoperability', 'Metadata Management', 'Cost Optimization', 'Data Mesh', 'Lineage Tracking', 'RBAC', 'Dataplex'],
   },
   {
     category: 'AI-Enabled Data Architecture',
