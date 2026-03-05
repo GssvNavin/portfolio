@@ -2,7 +2,7 @@
 
 import { useRef, useState, ChangeEvent } from 'react'
 import { motion } from 'framer-motion'
-import { Upload, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import FadeIn from './FadeIn'
 
 const projects = [
@@ -10,6 +10,7 @@ const projects = [
     id: 'p1',
     type: 'AI · Healthcare',
     emoji: '🤖',
+    defaultImage: '/hfs-bot.png',
     title: 'HFS Bot – AI Functional Expert',
     desc: 'An LLM-powered chatbot acting as a domain expert for Healthcare Cost Reporting, helping developers navigate complex CMS standards and reporting logic with ease.',
     impact: 'Reduced domain expert dependency · Accelerated developer onboarding',
@@ -19,6 +20,7 @@ const projects = [
   {
     id: 'p2',
     type: 'Analytics · FinTech',
+    defaultImage: '/powerbi-dashboard.png',
     emoji: '📊',
     title: 'Power BI Executive Dashboard Suite',
     desc: 'A suite of three strategic dashboards — Financial Performance, Operations, and Executive — delivering real-time KPIs and data-driven intelligence to senior stakeholders.',
@@ -29,6 +31,7 @@ const projects = [
   {
     id: 'p3',
     type: 'Data Engineering · Cloud',
+    defaultImage: '/enterprise-data-platform.png',
     emoji: '🏗️',
     title: 'Enterprise Data Platform',
     desc: 'Designed a cloud-native, scalable data platform with high-volume ingestion pipelines, transformation layers, and governed analytics built on Azure Data Factory and Snowflake.',
@@ -39,6 +42,7 @@ const projects = [
   {
     id: 'p4',
     type: 'Data Quality · Snowflake',
+    defaultImage: '/data-quality.png',
     emoji: '✅',
     title: 'Automated Data Quality Framework',
     desc: 'Built an automated validation system across enterprise datasets — schema validation, completeness checks, and anomaly detection using Snowflake Snowpark and Python.',
@@ -68,7 +72,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
     >
       {/* Image area */}
       <div
-        className="h-48 relative cursor-pointer group flex items-center justify-center overflow-hidden"
+        className="h-48 relative cursor-default group flex items-center justify-center overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' }}
         onClick={() => fileRef.current?.click()}
       >
@@ -76,7 +80,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           <>
             <img src={img} alt={project.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <Upload size={20} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+              < size={20} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           </>
         ) : (
@@ -86,13 +90,13 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
               className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white shadow-sm"
               style={{ background: project.accentColor }}
             >
-              <Upload size={12} />
-              Upload Screenshot
+              < size={12} />
+               Screenshot
             </div>
             <p className="text-slate-400 text-xs">Click to add project image</p>
           </div>
         )}
-        <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
+        
 
         {/* Type badge */}
         <div
